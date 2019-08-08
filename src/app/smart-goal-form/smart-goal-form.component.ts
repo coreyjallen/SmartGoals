@@ -15,12 +15,12 @@ import { Location } from '@angular/common';
 })
 export class SmartGoalFormComponent implements OnInit {
   
-  private title: String;
-  private date: Date;  
-  private tasks: Array<Task>;
+  public title: String;
+  public date: Date;  
+  public tasks: Array<Task>;
 
   private dialogRef: MatDialogRef<TaskDialogComponent>;
-  private activeForm$: Observable<Boolean>; 
+  public activeForm$: Observable<Boolean>; 
 
   constructor(
     private appService: AppService,

@@ -10,8 +10,8 @@ import { AppService } from '../services/app/app.service';
 })
 export class AccountOverviewComponent implements OnInit {
 
-  private goalProgress$: Observable<number>;
-  private suggestedTask: string;
+  public goalProgress$: Observable<number>;
+  public suggestedTask: string;
 
   constructor(private accountService: AccountService, private appService: AppService) { 
 

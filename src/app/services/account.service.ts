@@ -8,11 +8,11 @@ import { demoGoals } from '../../assets/demo/demoGoals';
   providedIn: 'root'
 })
 export class AccountService {
-  private smartGoals: Array<SmartGoal> = [];
-  private smartGoalsEmitter: BehaviorSubject<SmartGoal[]> = new BehaviorSubject(this.smartGoals); 
-  private loggedIn: BehaviorSubject<Boolean> = new BehaviorSubject(false);
-  private mode: BehaviorSubject<String> = new BehaviorSubject('demo');
-  private totalProgress: BehaviorSubject<number> = new BehaviorSubject(0);
+  public smartGoals: Array<SmartGoal> = [];
+  public smartGoalsEmitter: BehaviorSubject<SmartGoal[]> = new BehaviorSubject(this.smartGoals); 
+  public loggedIn: BehaviorSubject<Boolean> = new BehaviorSubject(false);
+  public mode: BehaviorSubject<String> = new BehaviorSubject('demo');
+  public totalProgress: BehaviorSubject<number> = new BehaviorSubject(0);
 
   constructor() {
   }

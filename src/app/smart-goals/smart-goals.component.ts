@@ -12,7 +12,7 @@ import { SmartGoal } from '../../types/smart-goal';
 /*  Provide a card view of all Current Smart goals in the app */
 export class SmartGoalsComponent implements OnInit {
   
-  private smartGoals$: Observable<SmartGoal[]>;
+  public smartGoals$: Observable<SmartGoal[]>;
   
   constructor(private accountService: AccountService) { 
   }

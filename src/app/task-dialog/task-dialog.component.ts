@@ -9,12 +9,12 @@ import { Days } from '../../types/task';
   styleUrls: ['./task-dialog.component.scss']
 })
 export class TaskDialogComponent {
-  private newGoal: Task;
-  private editMode: Boolean;
+  public newGoal: Task;
+  public editMode: Boolean;
 
-  private existingTitles: Array<String>;
-  private numberRatings = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  private dayOptions = Object.keys(Days);
+  public existingTitles: Array<String>;
+  public numberRatings = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  public dayOptions = Object.keys(Days);
 
   constructor(
     public dialogRef: MatDialogRef<TaskDialogComponent>,
