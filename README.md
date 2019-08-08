@@ -1,5 +1,9 @@
 # SmartGoals
 
+This is a demo of the S.M.A.R.T. goal app designed to help manage your goals on a daily basis.  It works well for those people who are ambitious, but could use a bit of help organizing and maintaining the daily traction needed to accomplish these goals.
+
+**This app is only meant to be viewed on Desktop at this time**
+
 To see this app in action, go here: https://coreyjallen.github.io/SmartGoals
 
 **NOTE:** Routing is not set up for demo.  If you refresh or navigate without using the UI, you will need to go back to the root URL and click 'Try Demo' again.
