@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { Task } from 'src/types/task';
+import { Task } from '../../types/task';
 import { Days } from '../../types/task';
 
 @Component({

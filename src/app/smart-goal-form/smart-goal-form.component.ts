@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { AppService } from '../services/app/app.service';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
-import { Task } from 'src/types/task';
+import { Task } from '../../types/task';
 import { AccountService } from '../services/account.service';
 import * as moment from 'moment';
 import { Location } from '@angular/common';

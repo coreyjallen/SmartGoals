@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../services/account.service';
 import { Observable } from 'rxjs';
-import { SmartGoal } from 'src/types/smart-goal';
+import { SmartGoal } from '../../types/smart-goal';
 
 @Component({
   selector: 'app-smart-goals',

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { SmartGoal } from 'src/types/smart-goal';
-import { Task } from 'src/types/task';
+import { SmartGoal } from '../../types/smart-goal';
+import { Task } from '../../types/task';
 import { demoGoals } from '../../assets/demo/demoGoals';
 
 @Injectable({
