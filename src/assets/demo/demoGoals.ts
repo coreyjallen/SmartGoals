@@ -12,7 +12,7 @@ export const demoGoals: SmartGoal[] = [
             new Task('Determine what physical activities you want to incorporate', 10, 2),
             new Task('Visit nutritionist', 10, 9),
             new Task('Take up one new physical hobby', 2, 5), 
-            new Task('Buy fitbit to remind you to stop coding after awhile and move', 4, 10),
+            new Task('Buy fitbit', 4, 10),
             new Task('Find an accountability partner', 10, 8)
         ]
     },
@@ -40,9 +40,9 @@ export const demoGoals: SmartGoal[] = [
             new Task('Make it oops proof.  Try making a new goal, and mess up a task.  Click the task bubble to edit', 10, 2),
             new Task('Provide demo collateral to populate the app', 10, 9),
             new Task('Make login page without accounts', 2, 5),
-            new Task('Make limited routing - need user context and validation to fully have good routes', 4, 10),
+            new Task('Add limited routing that doesn\'t work for URL manipulation', 4, 10),
             new Task('Get feedback from awesome company that is playing with this', 10, 8),
-            new Task('Offer to make another app with their requirements', 10, 8)
+            new Task('Offer to make another app that meets their requirements', 10, 8)
         ]
     }, 
 ];
