@@ -1,0 +1,37 @@
+.cards {
+    background-color: lightyellow;
+    width: 30%;
+    min-width: 400px;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px
+}
+
+.card-view {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.due-date {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+.form {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin: 10px 10px
+}
+
+.checkbox {
+    margin: 10px 10px;
+}
+
+.submit-button {
+    margin-top: 10px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

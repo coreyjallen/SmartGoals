@@ -1,0 +1,22 @@
+<h1>Your Goals</h1>
+<div class="card-view">
+  <mat-card *ngFor="let goal of smartGoals$ | async; let goalIndex = index" class='cards'>
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-title">{{goal.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="due-date">DUE: {{goal.time}}</div>
+      <mat-selection-list>
+        <mat-list-option *ngFor="let task of goal.tasks; let taskIndex = index" (click)="toggleTask(goalIndex, taskIndex)" [selected]="task.completed">
+          {{task.title}}
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-card-content>
+    <mat-card-footer class="footer">
+      <mat-label >Progress: </mat-label>
+      <mat-progress-bar color="primary" mode="determinate" [value]="goal.progress" class="progress-bar">
+      </mat-progress-bar> 
+      <mat-label>{{goal.progress | number : '1.0-2'}}%</mat-label>
+    </mat-card-footer>
+  </mat-card>
+</div>

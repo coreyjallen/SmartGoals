@@ -1,0 +1,29 @@
+<div class="page">
+    <h1>Welcome to S.M.A.R.T.</h1>
+    <div id="login-container" class="login-container">
+        <div id='emailInput' class="input-wrapper">
+            <label class="input-label">Email:  </label>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="email" #emailInput="ngModel" email required>
+                <mat-error *ngIf="emailInput.hasError('email') && !emailInput.hasError('required')">
+                    Please enter a valid email
+                </mat-error>
+                <mat-error *ngIf="emailInput.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error> 
+            </mat-form-field>
+        </div>
+
+        <div id='passwordInput' class="input-wrapper">
+            <label class="input-label">Password:  </label>
+            <mat-form-field appearance="outline"> 
+                <input matInput type="password" [(ngModel)]="password" #passwordInput="ngModel" required>
+            </mat-form-field>
+        </div>
+
+        <div class="footer">
+            <button mat-raised-button color="primary" (click)="launchDemoMode()">Try Demo</button>
+            <button mat-raised-button color="primary" (click)="login()">Log In</button>
+        </div>
+    </div>
+</div> 

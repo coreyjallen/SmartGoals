@@ -1,0 +1,21 @@
+<h1>Account Dashboard</h1>
+
+<div class="dashboard-wrapper">
+    <div class="progress-container">
+        <h2 class="progress-content">Total Goal Progress</h2>
+        <mat-progress-spinner
+            color="primary"
+            mode="determinate"
+            [value]="goalProgress$ | async"
+            style="margin:0 auto;"> 
+        </mat-progress-spinner>
+        <div class="progress-label">{{goalProgress$ | async | number : '1.0-2'}}%</div>
+    </div>
+
+    <div class="task-generator">
+        <button mat-raised-button type="button" color="primary" (click)="getTask()">What Should I Do?</button>
+        <div class="suggested-task">{{suggestedTask}}</div>
+    </div>
+</div>
+
+<app-smart-goals></app-smart-goals>

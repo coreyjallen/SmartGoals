@@ -1,0 +1,29 @@
+<div [hidden]="activeForm$ | async" class="main-container"> 
+
+  <h1>Create a S.M.A.R.T Goal</h1>
+  <form #smartForm="ngForm" (ngSubmit)="onSubmit(); smartForm.resetForm()" >
+    <mat-form-field class="form-group">
+      <input matInput #titleInput="ngModel" [(ngModel)]="title" name="title"  placeholder="Title" required>
+      <mat-error *ngIf="titleInput.errors?.required">title is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <input matInput [(ngModel)]="date" name="date" #dateInput="ngModel" [matDatepicker]="completionPicker" placeholder="Desired Completion Date" required>
+      <mat-datepicker-toggle matSuffix [for]="completionPicker"></mat-datepicker-toggle>
+      <mat-datepicker #completionPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-label class="tasks-header">Tasks</mat-label>
+    <mat-chip-list class="tasks-section">
+      <mat-chip *ngFor="let task of tasks" id="task.title" [removable]="true" (removed)="removeTask(task)" (click)="editTask(task)">
+        {{task.title}}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
+
+    <div class="tasks-footer">
+        <button mat-raised-button type="button" (click)="openTaskDialog()">add Task</button>
+        <button mat-raised-button type="submit" [disabled]="!smartForm.form.valid || (tasks.length <=0)">Submit</button>  
+    </div>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+<form #dialogForm="ngForm" (ngSubmit)="onSubmit(); dialogForm.resetForm()" class="form">
+  <mat-form-field class="form-group">
+    <input matInput name="title" #titleInput="ngModel" [(ngModel)]="newGoal.title" placeholder="Title:"  required uniqueNameValidator="{{existingTitles}}">
+    <mat-error *ngIf="titleInput.errors?.duplicateName">Title must be unique</mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-group">
+    <mat-label>Priority Level</mat-label>
+    <mat-select name="prioritySelect" [(ngModel)]="newGoal.priority" required> 
+      <mat-option *ngFor="let rating of numberRatings" [value]="rating" > 
+        {{rating}}
+      </mat-option>
+    </mat-select>
+    <mat-hint>
+      1 lowest, 10 highest
+    </mat-hint>
+  </mat-form-field> 
+  <mat-form-field class="form-group">
+    <mat-label>Interest Level</mat-label>
+    <mat-select name="interestSelect" [(ngModel)]="newGoal.interest" required> 
+      <mat-option *ngFor="let rating of numberRatings" [value]="rating"> 
+        {{rating}}
+      </mat-option>
+    </mat-select>
+    <mat-hint>
+      1 lowest, 10 highest
+    </mat-hint>
+  </mat-form-field>
+
+  <section>
+    <h4>Unavailable Days</h4>
+    <mat-checkbox *ngFor="let day of dayOptions" [checked]="isDayChecked(day)" [value]="day" (change)="addDay(day)" class="checkbox">{{day}}</mat-checkbox> 
+  </section>
+
+    <!-- FUTURE FEATURES -->
+    <!-- HOURS -->
+    <!-- PEOPLE -->
+    <!-- EVENT -->
+
+  <div id="footer" class="footer">
+      <button *ngIf="!editMode" mat-raised-button type="submit" color="primary" [disabled]="!dialogForm.form.valid" class="submit-button">Add</button>
+      <button *ngIf="editMode" mat-raised-button type="submit" color="primary" class="submit-button">OK</button>
+  </div>
+</form>
